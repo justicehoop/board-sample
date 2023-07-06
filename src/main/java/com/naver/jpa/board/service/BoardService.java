@@ -7,6 +7,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import lombok.RequiredArgsConstructor;
 
@@ -18,6 +19,7 @@ import com.naver.jpa.board.dto.BoardResponse;
 import com.naver.jpa.board.exception.ResourceNotFoundException;
 import com.naver.jpa.board.repository.BoardRepository;
 
+@Transactional
 @RequiredArgsConstructor
 @Service
 public class BoardService {

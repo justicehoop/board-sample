@@ -5,6 +5,7 @@ import java.util.Arrays;
 import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import lombok.RequiredArgsConstructor;
 
@@ -14,6 +15,7 @@ import com.naver.jpa.board.repository.ArticleRepository;
 import com.naver.jpa.board.repository.BoardRepository;
 import com.naver.jpa.board.repository.MemberRepository;
 
+@Transactional
 @Service
 @RequiredArgsConstructor
 public class DummyService {
